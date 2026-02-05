@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | CurrencyConverter</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">CurrencyConverter</div>
+
+      <nav class="nav">
+        <button class="nav-toggle">☰</button>
+
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#converter">Converter</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container about">
+      <h1>Helping Local Businesses Accept Bitcoin</h1>
+
+      <p>
+        CurrencyConverter was created as an educational and onboarding platform
+        to help local businesses understand, evaluate, and adopt Bitcoin as a
+        payment option.
+      </p>
+
+      <p>
+        Many business owners are curious about cryptocurrency but hesitant due
+        to volatility concerns, technical barriers, or lack of clear
+        information. This platform bridges that gap with simple tools and
+        real-world demonstrations.
+      </p>
+
+      <p>
+        Our approach is direct: in-person education, live conversion examples,
+        and practical guidance so businesses can make informed decisions about
+        accepting Bitcoin alongside traditional payments.
+      </p>
+    </main>
+
+    <script src="src/script.js"></script>
+    <!-- LOGIN MODAL -->
+    <div class="modal-overlay" id="loginModal">
+      <div class="modal">
+        <h2>Business Login</h2>
+
+        <input type="email" placeholder="Business Email" />
+        <input type="password" placeholder="Password" />
+
+        <button class="primary-btn">Login</button>
+
+        <p class="modal-close">Cancel</p>
+      </div>
+    </div>
+  </body>
+</html>

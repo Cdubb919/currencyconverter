@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CurrencyConverter</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">CurrencyConverter</div>
+
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#converter">Converter</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+      <!-- CONVERTER SECTION -->
+      <section id="converter">
+        <h1>Convert Currency to Cryptocurrency</h1>
+
+        <div class="converter">
+          <input type="number" id="amount" placeholder="Enter amount" />
+
+          <select id="currency">
+            <option value="usd">USD</option>
+            <option value="eur">EUR</option>
+            <option value="gbp">GBP</option>
+          </select>
+
+          <select id="crypto">
+            <option value="bitcoin">Bitcoin (BTC)</option>
+            <option value="ethereum">Ethereum (ETH)</option>
+            <option value="tether">Tether (USDT)</option>
+            <option value="solana">Solana (SOL)</option>
+            <option value="litecoin">Litecoin (LTC)</option>
+          </select>
+
+          <div class="quick-convert">
+            <button data-crypto="bitcoin">BTC</button>
+            <button data-crypto="ethereum">ETH</button>
+            <button data-crypto="tether">USDT</button>
+          </div>
+
+          <button id="convertBtn">Convert</button>
+
+          <p id="result"></p>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="about">
+        <h2>Why Accept Bitcoin?</h2>
+
+        <p>
+          CurrencyConverter was built to help local businesses understand and
+          adopt cryptocurrency—starting with Bitcoin—as a modern payment option.
+        </p>
+
+        <p>
+          Traditional payment processors charge high fees, introduce settlement
+          delays, and create unnecessary friction. Cryptocurrency payments offer
+          faster transactions, lower costs, and direct ownership of funds.
+        </p>
+
+        <p>
+          This platform is used as an educational tool to demonstrate real-world
+          currency-to-crypto value during in-person meetings with local
+          businesses, making the transition to Bitcoin simple, transparent, and
+          approachable.
+        </p>
+      </section>
+    </main>
+
+    <!-- JS -->
+    <script src="src/script.js"></script>
+    <!-- LOGIN MODAL -->
+    <div class="modal-overlay" id="loginModal">
+      <div class="modal">
+        <h2>Business Login</h2>
+
+        <input type="email" placeholder="Business Email" />
+        <input type="password" placeholder="Password" />
+
+        <button class="primary-btn">Login</button>
+
+        <button class="modal-close">Cancel</button>
+      </div>
+    </div>
+  </body>
+</html>
