@@ -15,11 +15,28 @@
         <button class="nav-toggle">☰</button>
 
         <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#converter">Converter</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><button class="login-btn">Login</button></li>
-        </ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="index.html#converter">Converter</a></li>
+  <li><a href="about.html">About</a></li>
+
+  <!-- Auth buttons -->
+  <li class="nav-login">
+    <button id="openLogin" class="login-btn">Login</button>
+  </li>
+
+  <li class="nav-signup">
+    <button class="signup-btn">Sign Up</button>
+  </li>
+
+  <!-- Logged-in links -->
+  <li class="nav-dashboard" style="display:none">
+    <a href="dashboard.html">Dashboard</a>
+  </li>
+
+  <li class="nav-logout" style="display:none">
+    <button id="logoutBtn" class="login-btn">Logout</button>
+  </li>
+</ul>
       </nav>
     </header>
 
@@ -50,6 +67,7 @@
     <!-- LOGIN MODAL -->
     <div class="modal-overlay" id="loginModal">
       <div class="modal">
+  <button class="modal-x">&times;</button>
         <h2>Business Login</h2>
 
         <input type="email" placeholder="Business Email" />

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Dashboard</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">CurrencyConverter</div>
+
+    <nav class="nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#converter">Converter</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><button id="logoutBtn" class="login-btn">Logout</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <h1>Your Conversion Reports</h1>
+
+    <!-- Clear History Button -->
+    <button id="clearHistoryBtn" class="primary-btn">Clear History</button>
+
+    <table id="reportTable">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Currency</th>
+          <th>Crypto</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <!-- DASHBOARD SCRIPT -->
+  <script>
+    // Redirect if not logged in
+    if (!localStorage.getItem('isLoggedIn')) {
+      window.location.href = "index.html";
+    }
+
+    const logoutBtn = document.getElementById('logoutBtn');
+    const tableBody = document.querySelector('#reportTable tbody');
+    const clearHistoryBtn = document.getElementById('clearHistoryBtn');
+
+    // Load conversion reports
+    function loadReports() {
+      tableBody.innerHTML = '';
+      const reports = JSON.parse(localStorage.getItem('reports')) || [];
+
+      if (reports.length === 0) {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td colspan="5" style="text-align:center;">No conversion history yet.</td>`;
+        tableBody.appendChild(row);
+        return;
+      }
+
+      reports.forEach(report => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${report.date}</td>
+          <td>${report.amount}</td>
+          <td>${report.currency}</td>
+          <td>${report.crypto}</td>
+          <td>${report.result}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    loadReports();
+
+    // Clear history
+    clearHistoryBtn.addEventListener('click', () => {
+      if (confirm('Are you sure you want to clear all conversion history?')) {
+        localStorage.removeItem('reports');
+        loadReports();
+      }
+    });
+
+    // Logout
+    logoutBtn.addEventListener('click', () => {
+      localStorage.removeItem('isLoggedIn');
+      window.location.href = "index.html";
+    });
+
+    // Optional: mobile nav toggle
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (toggleBtn && navMenu) {
+      toggleBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        toggleBtn.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

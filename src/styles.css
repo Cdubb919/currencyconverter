@@ -184,6 +184,7 @@ button:hover {
   width: 300px;
   text-align: center;
   border: 1px solid #6a5acd;
+  position: relative;
 }
 
 .modal input {
@@ -191,11 +192,42 @@ button:hover {
   margin-bottom: 1rem;
 }
 
+.modal h2 {
+  margin-bottom: 1.2rem;
+}
+
 .modal-close {
   background: none;
   border: none;
   color: #aaa;
   cursor: pointer;
+}
+
+.modal-x {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.modal-x:hover {
+  color: white;
+}
+
+/* Fade-in for conversion result */
+#result {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+#result.show {
+  opacity: 1;
 }
 
 @media (min-width: 768px) {

@@ -21,13 +21,33 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="#converter">Converter</a></li>
           <li><a href="about.html">About</a></li>
-          <li><button class="login-btn">Login</button></li>
+
+          <!-- Auth buttons -->
+          <li class="nav-login">
+            <button id="openLogin" class="login-btn">Login</button>
+          </li>
+          <li class="nav-signup">
+            <button class="signup-btn">Sign Up</button>
+          </li>
+
+          <!-- Logged-in links -->
+          <li class="nav-dashboard" style="display: none">
+            <a href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-logout" style="display: none">
+            <button id="logoutBtn" class="login-btn">Logout</button>
+          </li>
         </ul>
       </nav>
     </header>
 
     <!-- MAIN CONTENT -->
     <main class="container">
+      <!-- LIVE BITCOIN PRICE -->
+      <section id="btc-ticker">
+        <h2>Live Bitcoin Price</h2>
+        <p id="btcPrice">Loading...</p>
+      </section>
       <!-- CONVERTER SECTION -->
       <section id="converter">
         <h1>Convert Currency to Cryptocurrency</h1>
@@ -60,45 +80,41 @@
           <p id="result"></p>
         </div>
       </section>
-
-      <!-- ABOUT SECTION -->
-      <section id="about" class="about">
-        <h2>Why Accept Bitcoin?</h2>
-
-        <p>
-          CurrencyConverter was built to help local businesses understand and
-          adopt cryptocurrency—starting with Bitcoin—as a modern payment option.
-        </p>
-
-        <p>
-          Traditional payment processors charge high fees, introduce settlement
-          delays, and create unnecessary friction. Cryptocurrency payments offer
-          faster transactions, lower costs, and direct ownership of funds.
-        </p>
-
-        <p>
-          This platform is used as an educational tool to demonstrate real-world
-          currency-to-crypto value during in-person meetings with local
-          businesses, making the transition to Bitcoin simple, transparent, and
-          approachable.
-        </p>
-      </section>
     </main>
 
-    <!-- JS -->
-    <script src="src/script.js"></script>
     <!-- LOGIN MODAL -->
     <div class="modal-overlay" id="loginModal">
       <div class="modal">
+        <button class="modal-x" aria-label="Close modal">&times;</button>
+
         <h2>Business Login</h2>
 
         <input type="email" placeholder="Business Email" />
         <input type="password" placeholder="Password" />
 
         <button class="primary-btn">Login</button>
-
         <button class="modal-close">Cancel</button>
       </div>
     </div>
+
+    <!-- SIGN UP MODAL -->
+    <div class="modal-overlay" id="signupModal">
+      <div class="modal">
+        <button class="modal-x" aria-label="Close modal">&times;</button>
+
+        <h2>Create Business Account</h2>
+
+        <input type="text" placeholder="Business Name" />
+        <input type="email" placeholder="Business Email" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+
+        <button class="primary-btn">Create Account</button>
+        <button class="modal-close">Cancel</button>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="src/script.js"></script>
   </body>
 </html>
