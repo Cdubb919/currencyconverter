@@ -1,82 +1,358 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="Learn how CurrencyConverter makes cryptocurrency conversion easier to understand for businesses and everyday users."
+    />
+
     <title>About | CurrencyConverter</title>
+
     <link rel="stylesheet" href="src/styles.css" />
   </head>
 
   <body>
     <header class="header">
-      <div class="logo">CurrencyConverter</div>
+      <a href="index.html" class="logo">CurrencyConverter</a>
 
-      <nav class="nav">
-        <button class="nav-toggle">☰</button>
+      <nav class="nav" aria-label="Main navigation">
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
 
         <ul class="nav-menu">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="index.html#converter">Converter</a></li>
-  <li><a href="about.html">About</a></li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
 
-  <!-- Auth buttons -->
-  <li class="nav-login">
-    <button id="openLogin" class="login-btn">Login</button>
-  </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
 
-  <li class="nav-signup">
-    <button class="signup-btn">Sign Up</button>
-  </li>
+          <li class="nav-login">
+            <button
+              type="button"
+              id="openLogin"
+              class="login-btn"
+            >
+              Login
+            </button>
+          </li>
 
-  <!-- Logged-in links -->
-  <li class="nav-dashboard" style="display:none">
-    <a href="dashboard.html">Dashboard</a>
-  </li>
+          <li class="nav-signup">
+            <button type="button" class="signup-btn">
+              Sign Up
+            </button>
+          </li>
 
-  <li class="nav-logout" style="display:none">
-    <button id="logoutBtn" class="login-btn">Logout</button>
-  </li>
-</ul>
+          <li class="nav-dashboard" style="display: none">
+            <a href="dashboard.html">Dashboard</a>
+          </li>
+
+          <li class="nav-logout" style="display: none">
+            <button
+              type="button"
+              id="logoutBtn"
+              class="login-btn"
+            >
+              Logout
+            </button>
+          </li>
+        </ul>
       </nav>
     </header>
 
-    <main class="container about">
-      <h1>Helping Local Businesses Accept Bitcoin</h1>
+    <main class="about-page">
+      <section class="about-hero">
+        <p class="about-hero__eyebrow">
+          Making crypto easier to understand
+        </p>
 
-      <p>
-        CurrencyConverter was created as an educational and onboarding platform
-        to help local businesses understand, evaluate, and adopt Bitcoin as a
-        payment option.
-      </p>
+        <h1>
+          Helping businesses explore cryptocurrency with confidence
+        </h1>
 
-      <p>
-        Many business owners are curious about cryptocurrency but hesitant due
-        to volatility concerns, technical barriers, or lack of clear
-        information. This platform bridges that gap with simple tools and
-        real-world demonstrations.
-      </p>
+        <p class="about-hero__intro">
+          CurrencyConverter is an educational fintech platform
+          designed to make cryptocurrency conversion simple,
+          approachable, and useful for businesses and everyday users.
+        </p>
 
-      <p>
-        Our approach is direct: in-person education, live conversion examples,
-        and practical guidance so businesses can make informed decisions about
-        accepting Bitcoin alongside traditional payments.
-      </p>
+        <div class="about-hero__actions">
+          <a
+            href="index.html#converter"
+            class="about-btn about-btn--primary"
+          >
+            Try the converter
+          </a>
+
+          <a
+            href="#how-it-works"
+            class="about-btn about-btn--secondary"
+          >
+            How it works
+          </a>
+        </div>
+      </section>
+
+      <section class="about-mission">
+        <div class="about-mission__content">
+          <p class="about-section__eyebrow">Our purpose</p>
+
+          <h2>
+            Bridging the gap between traditional money and digital
+            assets
+          </h2>
+
+          <p>
+            Many people are interested in cryptocurrency but feel
+            discouraged by confusing terminology, market volatility,
+            and unfamiliar technology. CurrencyConverter was created
+            to remove those barriers through simple tools and clear
+            information.
+          </p>
+
+          <p>
+            Users can compare traditional currencies with popular
+            cryptocurrencies, view live Bitcoin pricing, and explore
+            real conversion examples without navigating a complicated
+            trading platform.
+          </p>
+        </div>
+
+        <div class="about-mission__visual" aria-hidden="true">
+          <div class="about-orbit about-orbit--one"></div>
+          <div class="about-orbit about-orbit--two"></div>
+
+          <div class="about-coin">
+            <span>₿</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-features">
+        <div class="about-section-heading">
+          <p class="about-section__eyebrow">Built for clarity</p>
+
+          <h2>Simple tools with a practical purpose</h2>
+        </div>
+
+        <div class="about-feature-grid">
+          <article class="about-feature-card">
+            <span class="about-feature-card__number">01</span>
+
+            <h3>Real-time estimates</h3>
+
+            <p>
+              Convert supported traditional currencies into popular
+              cryptocurrencies using current market data.
+            </p>
+          </article>
+
+          <article class="about-feature-card">
+            <span class="about-feature-card__number">02</span>
+
+            <h3>Easy comparisons</h3>
+
+            <p>
+              Explore Bitcoin, Ethereum, Solana, Litecoin, and Tether
+              without complicated charts or trading terminology.
+            </p>
+          </article>
+
+          <article class="about-feature-card">
+            <span class="about-feature-card__number">03</span>
+
+            <h3>Saved activity</h3>
+
+            <p>
+              Demo account users can save recent conversions and
+              review their activity from the dashboard.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-process" id="how-it-works">
+        <div class="about-section-heading">
+          <p class="about-section__eyebrow">How it works</p>
+
+          <h2>From currency to crypto in three steps</h2>
+        </div>
+
+        <div class="about-steps">
+          <article class="about-step">
+            <div class="about-step__icon">1</div>
+
+            <div>
+              <h3>Enter an amount</h3>
+
+              <p>
+                Choose the value and traditional currency you want to
+                convert.
+              </p>
+            </div>
+          </article>
+
+          <article class="about-step">
+            <div class="about-step__icon">2</div>
+
+            <div>
+              <h3>Select a cryptocurrency</h3>
+
+              <p>
+                Choose from the supported digital currencies in the
+                converter.
+              </p>
+            </div>
+          </article>
+
+          <article class="about-step">
+            <div class="about-step__icon">3</div>
+
+            <div>
+              <h3>View the estimate</h3>
+
+              <p>
+                Receive a conversion estimate based on current market
+                pricing.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-disclaimer">
+        <div>
+          <p class="about-section__eyebrow">Important note</p>
+
+          <h2>Designed for education and demonstration</h2>
+        </div>
+
+        <p>
+          CurrencyConverter does not process cryptocurrency purchases,
+          trades, or payments. Conversion results are estimates and
+          should not be considered financial advice.
+        </p>
+      </section>
+
+      <section class="about-cta">
+        <p class="about-section__eyebrow">
+          Explore the market
+        </p>
+
+        <h2>See what your money could equal in crypto</h2>
+
+        <a
+          href="index.html#converter"
+          class="about-btn about-btn--primary"
+        >
+          Open the converter
+        </a>
+      </section>
     </main>
 
-    <script src="src/script.js"></script>
     <!-- LOGIN MODAL -->
     <div class="modal-overlay" id="loginModal">
       <div class="modal">
-  <button class="modal-x">&times;</button>
-        <h2>Business Login</h2>
+        <button
+          type="button"
+          class="modal-x"
+          aria-label="Close login modal"
+        >
+          &times;
+        </button>
 
-        <input type="email" placeholder="Business Email" />
-        <input type="password" placeholder="Password" />
+        <h2>Account Login</h2>
 
-        <button class="primary-btn">Login</button>
+        <input
+          type="email"
+          placeholder="Email address"
+          autocomplete="email"
+        />
 
-        <p class="modal-close">Cancel</p>
+        <input
+          type="password"
+          placeholder="Password"
+          autocomplete="current-password"
+        />
+
+        <button type="button" class="primary-btn">
+          Login
+        </button>
+
+        <button type="button" class="modal-close">Cancel</button>
       </div>
     </div>
+
+    <!-- SIGN UP MODAL -->
+<div class="modal-overlay" id="signupModal">
+  <div class="modal">
+    <button
+      type="button"
+      class="modal-x"
+      aria-label="Close sign-up modal"
+    >
+      &times;
+    </button>
+
+    <h2>Create Your Account</h2>
+
+    <input
+      id="signupName"
+      type="text"
+      placeholder="Name or business name"
+      autocomplete="organization"
+    />
+
+    <input
+      id="signupEmail"
+      type="email"
+      placeholder="Email address"
+      autocomplete="email"
+    />
+
+    <input
+      id="signupPassword"
+      type="password"
+      placeholder="Password"
+      autocomplete="new-password"
+    />
+
+    <input
+      id="signupConfirmPassword"
+      type="password"
+      placeholder="Confirm password"
+      autocomplete="new-password"
+    />
+
+    <p class="modal-message" id="signupMessage"></p>
+
+    <button
+      type="button"
+      class="primary-btn"
+      id="createAccountBtn"
+    >
+      Create Account
+    </button>
+
+    <button type="button" class="modal-close">
+      Cancel
+    </button>
+  </div>
+</div>
+
+    <script src="src/script.js"></script>
   </body>
 </html>

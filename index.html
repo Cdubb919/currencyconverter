@@ -19,7 +19,6 @@
 
         <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="#converter">Converter</a></li>
           <li><a href="about.html">About</a></li>
 
           <!-- Auth buttons -->
@@ -51,6 +50,11 @@
       <!-- CONVERTER SECTION -->
       <section id="converter">
         <h1>Convert Currency to Cryptocurrency</h1>
+
+        <p class="converter-subtitle">
+          Get fast, real-time estimates for the world’s most popular
+          cryptocurrencies.
+        </p>
 
         <div class="converter">
           <input type="number" id="amount" placeholder="Enter amount" />
@@ -98,21 +102,61 @@
     </div>
 
     <!-- SIGN UP MODAL -->
-    <div class="modal-overlay" id="signupModal">
-      <div class="modal">
-        <button class="modal-x" aria-label="Close modal">&times;</button>
+<div class="modal-overlay" id="signupModal">
+  <div class="modal">
+    <button
+      type="button"
+      class="modal-x"
+      aria-label="Close sign-up modal"
+    >
+      &times;
+    </button>
 
-        <h2>Create Business Account</h2>
+    <h2>Create Your Account</h2>
 
-        <input type="text" placeholder="Business Name" />
-        <input type="email" placeholder="Business Email" />
-        <input type="password" placeholder="Password" />
-        <input type="password" placeholder="Confirm Password" />
+    <input
+      id="signupName"
+      type="text"
+      placeholder="Name or business name"
+      autocomplete="organization"
+    />
 
-        <button class="primary-btn">Create Account</button>
-        <button class="modal-close">Cancel</button>
-      </div>
-    </div>
+    <input
+      id="signupEmail"
+      type="email"
+      placeholder="Email address"
+      autocomplete="email"
+    />
+
+    <input
+      id="signupPassword"
+      type="password"
+      placeholder="Password"
+      autocomplete="new-password"
+    />
+
+    <input
+      id="signupConfirmPassword"
+      type="password"
+      placeholder="Confirm password"
+      autocomplete="new-password"
+    />
+
+    <p class="modal-message" id="signupMessage"></p>
+
+    <button
+      type="button"
+      class="primary-btn"
+      id="createAccountBtn"
+    >
+      Create Account
+    </button>
+
+    <button type="button" class="modal-close">
+      Cancel
+    </button>
+  </div>
+</div>
 
     <!-- JS -->
     <script src="src/script.js"></script>
